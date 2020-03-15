@@ -16,7 +16,8 @@
     "camunda-bpmn-moddle": "^4.0.1"
   },
   "devDependencies": {
-    "snowpack": "^1.1.2"
+    "snowpack": "^1.1.2",
+    "browser-sync": "^2.26.7"
   },
   "snowpack": {
     "webDependencies": [
