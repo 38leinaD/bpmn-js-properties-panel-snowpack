@@ -1,0 +1,36 @@
+{
+  "name": "bpmn-js-properties-panel-snowpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "postinstall": "snowpack --clean --include './src/index.js'",
+    "start": "browser-sync src web_modules -f src --cors --no-notify --single"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "min-dash": "^3.5.0",
+    "bpmn-js": "^6.3.3",
+    "bpmn-js-properties-panel": "^0.32.0",
+    "diagram-js": "^5.0.0",
+    "camunda-bpmn-moddle": "^4.0.1"
+  },
+  "devDependencies": {
+    "snowpack": "^1.1.2"
+  },
+  "snowpack": {
+    "webDependencies": [
+      "jquery",
+      "min-dash",
+      "bpmn-js/lib/Modeler.js",
+      "bpmn-js-properties-panel/lib/index.js",
+      "bpmn-js-properties-panel/lib/provider/bpmn/index.js",
+      "bpmn-js-properties-panel/lib/provider/camunda/index.js",
+      "diagram-js"
+    ],
+    "dedupe": [
+      "bpmn-js/lib/Modeler.js",
+      "diagram-js"
+    ]
+  }
+}
